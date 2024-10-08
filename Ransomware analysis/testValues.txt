@@ -1,0 +1,15 @@
+#Test values
+'''RansomwareNames=["Cryptowall", "Cryptolocker", "CTB Locker", "Locky", "Teslacrypt", "Torrentlocker", "Winlocker"]
+IOCs=["Delete Shadow Copy", "I2P Anonymity Network", "Connect to tor2web", "Request to high Entropy Domain Name",
+       "File Encryption", "Encrypts File Name", "Locks Screen", "Deletes original Files from disk",
+         "Import and Links to Crypto Libraries", "Packed/obfuscated", "Create RWX memory"]
+weights=[1,2,1,3,1,2,1,1,3,2,1]
+#Below matrix is such that IOC_Occurences[i,j] represnts whether IOCs[j] is detected from RansomwareNames[i]
+IOC_Occurences=[[1,1,1,1,1,1,0,0,1,1,1],
+                [1,0,1,0,1,0,0,0,0,1,0],
+                [0,0,0,0,1,0,0,0,0,1,0],
+                [1,0,1,1,1,0,0,0,0,0,0],
+                [1,0,1,0,1,0,0,0,0,1,1],
+                [1,0,1,0,1,0,0,0,0,1,0],
+                [0,0,0,0,0,0,1,1,0,0,0]]
+'''

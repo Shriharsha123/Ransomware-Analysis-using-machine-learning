@@ -1,0 +1,35 @@
+Project Progress Presentation will be scheduled form Monday(2/9/2024). 
+
+According to the plan, group must be ready with the Literature Review, SRS and Design phase of the project.
+
+Project group has to present following information regarding the project.
+1. Summary of Literature Review
+2. SRS:
+        a. Functional req. and Non-functional Req.
+        b. Hardware Req. with specifications
+        c. Communication Interfaces (if any)
+        d. APIs
+Be ready with suitable UML diagrams to understand the flow of the system/software.
+
+1. System Flow Diagram
+2. Use case diagrams
+3. Activity Diagrams
+4. Sequence Diagram
+5. E-R Diagram(if DB is used)
+6. Any other diagrams related to the project(if any) 
+The group has to present the work carried out till now.
+PPT can be used (if necessary). 
+
+Maximum discussion time for each group is 15min
+
+[17:02, 8/29/2024] Ashith: For the next presentation
+1. We have to submit the static analysis of 15-20 ransomware families along with the primary indicators of the compromise for the same 
+2. And also present the environment which is needed for the dynamic analysis
+[17:03, 8/29/2024] Ashith: Depending upon the project progress we might have to stay back from the upcoming weeks
+[17:06, 8/29/2024] Ashith: Rough sketch of the project goes like this
+1. Carry out static analysis for various ransomware families 
+2. Find the major indicators of compromise and note them down 
+3. Carry out the dynamic analysis for ransomwares which cannot be identified using dynamic analysis 
+4. Come up with a program to assign rank for the identified IOCs (Just like how the virus total score work's)
+5. Compare the derived IOCs with the acquired dataset
+6. Implement the ML model to determine whether the tested file is malicious or not

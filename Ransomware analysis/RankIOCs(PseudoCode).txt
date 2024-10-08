@@ -1,0 +1,29 @@
+RankIOCs( RansomeWareNames[0,..,n-1], IOCs[0,..m-1], weights[0,..,m-1], IOC_Occurrences[0,..,n-1][0,..,m-1]):
+//Input:
+// 1. Array of n ransomwares
+// 2. Array of m IOCs
+// 3. Array of weights of each IOC
+// 4. 2D array where each row gives the occurrence of an IOCs in the given ransomwares
+//Output:
+// All m IOCs ranked (out of 100%)
+sum=0
+Scores=[]
+for i -> 0 to m-1:
+	for j -> 0 to n-1:
+		sum <- sum + IOC_Occurrence[i][j]*weights[i]
+	end of for loop
+	//Done calculating score of an IOC
+	Scores.append(sum)
+	sum=0
+end of for loop
+percentages=[]
+//Converting scores into values out of 100 by using Sigmoid function
+for i -> 0 to m-1:
+	percentage=1/(1+e^(-Scores[i]))*100
+	percentages.append*(percentage)
+indexes=[0,..,m-1]
+Sort(Scores[0,..,m-1],indexes[0,..,m-1]) //Use any sorting algorithm to sort the scores
+//Above function also modifies the indexes array for reference about which IOC was sorted to which position
+for i ->0 to m-1:
+	"print IOCs[indexes[i]], percentages[indexes[i]]"
+

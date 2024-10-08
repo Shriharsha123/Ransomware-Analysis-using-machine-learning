@@ -1,0 +1,17 @@
+#Variance threshold for feature selection
+from sklearn.feature_selection import VarianceThreshold
+X = [[0, 0, 1], [0, 1, 0], [1, 0, 0], [0, 1, 1], [0, 1, 0], [0, 1, 1]]
+sel = VarianceThreshold(threshold=(.8 * (1 - .8)))
+sel.fit_transform(X)
+
+#RF classifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.datasets import make_classification
+X, y = make_classification(n_samples=1000, n_features=4,
+                           n_informative=2, n_redundant=0,
+                           random_state=0, shuffle=False)
+clf = RandomForestClassifier(max_depth=2, random_state=0)
+clf.fit(X, y)
+print(clf.predict([[0, 0, 0, 0]]))
+
+Moreira, Caio; Moreira, Davi; Sales Jr., Claudomiro (2024), “Ransomware PE Header Feature Dataset”, Mendeley Data, V3, doi: 10.17632/p3v94dft2y.3
